@@ -23,5 +23,13 @@ pipeline {
                 
             }
         }
+        stage('sonar') {
+            
+            steps {
+                
+                  sonarscan()
+                
+            }
+        }
     }
 }
