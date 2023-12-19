@@ -3,7 +3,7 @@ pipeline {
     agent any
     environment {
         SCANNER_HOME=tool 'sonar-scanner'
-        TMDB_API_KEY = credentials('movieapi')
+        sus = credentials('movieapi')
     }
 
     stages {
