@@ -1,5 +1,5 @@
 def call(){
     withSonarQubeEnv(credentialsId: 'sonar-api') {
-    sh 'sonar-scanner'
+    sh 'sonar-scanner -Dsonar.projectName=Netflix'
 }
 }
