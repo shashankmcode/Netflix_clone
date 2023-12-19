@@ -5,7 +5,7 @@ pipeline {
 
     stages {
         
-        stage('Build') {
+        stage('Connect') {
             
             steps {
                 
@@ -15,7 +15,7 @@ pipeline {
                 
             }
         }
-        stage('') {
+        stage('Build') {
             
             steps {
                 
