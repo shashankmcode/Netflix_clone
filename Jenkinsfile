@@ -17,15 +17,15 @@ pipeline {
                 
             }
         }
-        //stage('Build') {
+        stage('Build Docker image') {
             
-           // steps {
+            steps {
                 
-              //      buildimage()
+                    buildimage()
                 
-           // }
-       // }
-        stage('sonar') {
+            }
+        }
+        stage('SonarStaticCode Analysis') {
             
             steps {
                 
@@ -33,11 +33,19 @@ pipeline {
                 
             }
         }
-        stage('sonarquality') {
+        stage('SonarQuality gate Analysis') {
             
             steps {
                 
                   qualitygate()
+                
+            }
+        }
+        stage('Trivy image scan') {
+            
+            steps {
+                
+                  trivy()
                 
             }
         }
