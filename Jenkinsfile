@@ -29,6 +29,14 @@ pipeline {
             
             steps {
                 
+                  sonarscan()
+                
+            }
+        }
+        stage('sonar') {
+            
+            steps {
+                
                   qualitygate()
                 
             }
