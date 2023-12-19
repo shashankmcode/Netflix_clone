@@ -33,7 +33,7 @@ pipeline {
                 
             }
         }
-        stage('sonar') {
+        stage('sonarquality') {
             
             steps {
                 
