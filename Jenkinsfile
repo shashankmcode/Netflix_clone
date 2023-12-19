@@ -15,14 +15,14 @@ pipeline {
                 
             }
         }
-        stage('Build') {
+        //stage('Build') {
             
-            steps {
+           // steps {
                 
-                    buildimage()
+              //      buildimage()
                 
-            }
-        }
+           // }
+       // }
         stage('sonar') {
             
             steps {
