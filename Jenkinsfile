@@ -18,14 +18,7 @@ pipeline {
                 
             }
         }
-        stage('Build Docker image') {
-            
-            steps {
-                
-                    buildimage()
-                
-            }
-        }
+        
         stage('SonarStaticCode Analysis') {
             
             steps {
@@ -42,11 +35,27 @@ pipeline {
                 
             }
         }
+        stage('Build Docker image') {
+            
+            steps {
+                
+                    buildimage()
+                
+            }
+        }
         stage('Trivy image scan') {
             
             steps {
                 
                   trivy()
+                
+            }
+        }
+        stage('Run Docker image') {
+            
+            steps {
+                
+                    runimage()
                 
             }
         }
